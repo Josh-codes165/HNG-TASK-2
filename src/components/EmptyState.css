@@ -1,0 +1,28 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+.empty-state__illustration {
+  margin-bottom: 2.5rem;
+}
+
+.empty-state__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.63px;
+}
+
+.empty-state__text {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  max-width: 220px;
+  line-height: 1.5;
+}

@@ -1,0 +1,138 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  /* Desktop: vertical sidebar */
+  width: 80px;
+  height: 100vh;
+  background-color: var(--color-sidebar);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Rounded top-right and bottom-right corners (matches Figma) */
+  border-radius: 0 20px 20px 0;
+
+  transition: background-color 0.3s ease;
+}
+
+/* Logo area — purple background box */
+.sidebar__logo {
+  width: 100%;
+  height: 80px;
+  background-color: var(--color-purple);
+  border-radius: 0 20px 20px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Logo sits on top of a lighter purple arc */
+  position: relative;
+  overflow: hidden;
+}
+
+/* The arc/half-circle at the bottom of the logo box */
+.sidebar__logo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: var(--color-purple-hover);
+  border-radius: 20px 0 0 0;
+}
+
+/* Logo SVG sits above the ::after pseudo-element */
+.sidebar__logo svg {
+  position: relative;
+  z-index: 1;
+}
+
+/* Bottom section: toggle + divider + avatar */
+.sidebar__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Theme toggle button */
+.sidebar__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar__theme-toggle:hover {
+  opacity: 0.7;
+}
+
+/* Divider line between toggle and avatar */
+.sidebar__divider {
+  width: 100%;
+  height: 1px;
+  background-color: #494E6E;
+  margin: 0.5rem 0;
+}
+
+/* Avatar */
+.sidebar__avatar {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== MOBILE — top horizontal bar ===== */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    height: 72px;
+    flex-direction: row;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .sidebar__logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 0 20px 20px 0;
+    flex-shrink: 0;
+  }
+
+  .sidebar__bottom {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 1rem;
+    width: auto;
+  }
+
+  .sidebar__divider {
+    width: 1px;
+    height: 72px;
+    margin: 0 0.5rem;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sidebar {
+    width: 80px;
+  }
+}

@@ -1,0 +1,103 @@
+/* ===== LIGHT THEME (default) ===== */
+:root,
+[data-theme="light"] {
+  --color-bg: #F8F8FB;
+  --color-card: #FFFFFF;
+  --color-sidebar: #373B53;
+  --color-text-primary: #0C0E16;
+  --color-text-muted: #888EB0;
+  --color-text-heading: #0C0E16;
+  --color-purple: #7C5DFA;
+  --color-purple-hover: #9277FF;
+  --color-purple-light: #F9FAFE;
+  --color-red: #EC5757;
+  --color-red-hover: #FF9797;
+  --color-border: #DFE3FA;
+  --color-input-bg: #FFFFFF;
+  --color-draft-btn: #373B53;
+  --color-draft-btn-hover: #0C0E16;
+
+  /* Status colors */
+  --color-paid-bg: rgba(51, 214, 159, 0.06);
+  --color-paid-text: #33D69F;
+  --color-pending-bg: rgba(255, 143, 0, 0.06);
+  --color-pending-text: #FF8F00;
+  --color-draft-bg: rgba(55, 59, 83, 0.06);
+  --color-draft-text: #373B53;
+}
+
+/* ===== DARK THEME ===== */
+[data-theme="dark"] {
+  --color-bg: #141625;
+  --color-card: #1E2139;
+  --color-sidebar: #1E2139;
+  --color-text-primary: #FFFFFF;
+  --color-text-muted: #DFE3FA;
+  --color-text-heading: #FFFFFF;
+  --color-purple-light: #252945;
+  --color-border: #252945;
+  --color-input-bg: #1E2139;
+  --color-draft-btn: #252945;
+  --color-draft-btn-hover: #0C0E16;
+
+  /* Status colors stay the same in dark mode */
+  --color-draft-bg: rgba(223, 227, 250, 0.06);
+  --color-draft-text: #DFE3FA;
+}
+
+/* ===== GLOBAL RESET & BASE STYLES ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Smooth transition for theme switching */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Invoice card keyboard focus */
+.invoice-card:focus-visible {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 2px;
+}
+
+/* Filter trigger hover */
+.filter__trigger:focus-visible {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Back button focus */
+.detail__back-btn:focus-visible,
+.form-page__back-btn:focus-visible {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* All buttons focus-visible ring */
+button:focus-visible {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 2px;
+}
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Form inputs don't overflow on small screens */
+input, select, textarea {
+  max-width: 100%;
+}
