@@ -1,11 +1,11 @@
 import None from "../assets/None.png"
+import './EmptyState.css'
 
 export default function EmptyState({ isFiltered }) {
   return (
     <div className="empty-state" role="status" aria-live="polite">
       <img src={None} alt=""
-      // width="242"
-        // height="200"
+      
         viewBox="0 0 242 200"
         aria-hidden="true"
         className="empty-state__illustration"
