@@ -5,11 +5,25 @@
 
 .layout__content {
   flex: 1;
-  margin-left: 80px; /* same as sidebar width */
   padding: 3rem 2.5rem;
-  max-width: 780px;
+  max-width: 860px;
   width: 100%;
-  margin-right: auto;
+  margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .layout__content {
+    margin-top: 72px;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .layout__content {
+    padding: 3rem;
+  }
 }
 
 /* Mobile */
