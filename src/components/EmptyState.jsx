@@ -1,10 +1,15 @@
 import "./EmptyState.css"
+import  None from '../assets/None.png'
 
 export default function EmptyState({ isFiltered }) {
   return (
     <div className="empty-state" role="status" aria-live="polite">
+      <img src={None} alt="" style={{
+        width : "242",
+        height :"200"
+      }}/>
       {/* Illustration */}
-      <svg
+      {/* <svg
         className="empty-state__illustration"
         xmlns="http://www.w3.org/2000/svg"
         width="242"
@@ -36,7 +41,7 @@ export default function EmptyState({ isFiltered }) {
             />
           </g>
         </g>
-      </svg>
+      </svg> */}
 
       <h2 className="empty-state__title">Nothing here</h2>
 
